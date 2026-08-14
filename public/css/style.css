@@ -54,6 +54,17 @@
     animation-delay: 0.45s;
 }
 
+.intro-email a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    letter-spacing: inherit;
+}
+
+.intro-email a:hover {
+    color: #999999;
+}
+
 .intro.ocultar {
     opacity: 0;
     pointer-events: none;
