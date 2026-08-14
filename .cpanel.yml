@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/rhaidocl/public_html/
-    - /bin/cp -R index.html css img "$DEPLOYPATH"
+    - /bin/cp -R public/* $DEPLOYPATH
