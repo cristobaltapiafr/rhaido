@@ -1,0 +1,107 @@
+.intro {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.7s ease;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-logo {
+    width: 420px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: aparecerLogo 0.6s ease forwards;
+}
+
+.intro-subtitle {
+    margin-top: 0px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecerTexto 0.6s ease forwards;
+    animation-delay: 0.25s;
+}
+
+.intro-email {
+    margin-top: 2px;
+    color: #777777;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecerTexto 0.6s ease forwards;
+    animation-delay: 0.45s;
+}
+
+.intro.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro.ocultar .intro-logo {
+    transform: scale(1.1);
+    opacity: 0;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.7s ease;
+}
+
+.intro.ocultar .intro-subtitle,
+.intro.ocultar .intro-email {
+    opacity: 0;
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+@keyframes aparecerLogo {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes aparecerTexto {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
